@@ -39,7 +39,7 @@ public class TestForm {
                         "app", "pass");
         ) {
             login();
-            DataHelper.VerifyCode verifyCode = runner.query(conn, verifyCodeBD,
+            val verifyCode = runner.query(conn, verifyCodeBD,
                     new BeanHandler<>(DataHelper.VerifyCode.class));
 
             verify.setCode(verifyCode.getCode());
